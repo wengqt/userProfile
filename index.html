@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>医疗平台</title>
+    <link rel="stylesheet" href="/css/mdui.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="js/mdui.min.js"></script>
+</head>
+
+<body class=" mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-drawer-body-left">
+    <header class="mdui-appbar mdui-appbar-fixed">
+        <div class="mdui-toolbar mdui-color-theme-300" style="color: white!important;z-index: 1111;">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="taggle-icon">
+                <i class="mdui-icon material-icons">menu</i>
+            </a>
+            <span class="mdui-typo-title">Title</span>
+            <div class="mdui-tab mdui-tab-centered mdui-color-theme-300  top-tab" style="color: white!important;" mdui-tab>
+                <a href="#home" class="mdui-ripple" data-id="home">首页</a>
+                <a href="#example3-tab2" class="mdui-ripple" data-id="analysis">分析统计</a>
+                <a href="#example3-tab2" class="mdui-ripple" data-id="profile">个人画像</a>
+                <a href="#example3-tab2" class="mdui-ripple" data-id="predict">医疗预测</a>
+                <a href="#example3-tab3" class="mdui-ripple">产品相关</a>
+            </div>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">refresh</i>
+            </a>
+        </div>
+    </header>
+
+
+    <div id="container">
+        <section>
+            <div class="mdui-drawer" id="drawer">
+                <ul class="mdui-list" mdui-collapse="{accordion: true}">
+
+                    <li class="mdui-list-item mdui-ripple _list" href="#home">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                        <div class="mdui-list-item-content">Home</div>
+                    </li>
+
+                    <li class="mdui-list-item mdui-ripple _list">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">dashboard</i>
+                        <div class="mdui-list-item-content">Dashboard</div>
+                    </li>
+
+                    <li class="mdui-collapse-item mdui-collapse-item-open">
+                        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                            <i class="mdui-list-item-icon mdui-icon material-icons">people</i>
+                            <div class="mdui-list-item-content">Audience</div>
+                            <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                        </div>
+                        <div class="mdui-collapse-item-body mdui-list ">
+                            <a href="#home" class="mdui-list-item mdui-ripple _list">Overview</a>
+                            <a class="mdui-list-item mdui-ripple _list">Language</a>
+                            <a class="mdui-list-item mdui-ripple _list">Location</a>
+                            <a class="mdui-list-item mdui-ripple _list">New vs Returning</a>
+                        </div>
+                    </li>
+                    <li class="mdui-collapse-item">
+                        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                            <i class="mdui-list-item-icon mdui-icon material-icons">device_hub</i>
+                            <div class="mdui-list-item-content">Acquisition</div>
+                            <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                        </div>
+                        <div class="mdui-collapse-item-body mdui-list">
+                            <div class="mdui-list-item mdui-ripple _list">Overview</div>
+                            <div class="mdui-list-item mdui-ripple _list">All Traffic</div>
+                            <div class="mdui-list-item mdui-ripple _list">Direct Traffic</div>
+                            <div class="mdui-list-item mdui-ripple _list">Search Overview</div>
+                        </div>
+                    </li>
+
+                    <li class="mdui-collapse-item">
+                        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                            <i class="mdui-list-item-icon mdui-icon material-icons">touch_app</i>
+                            <div class="mdui-list-item-content">Behavior</div>
+                            <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                        </div>
+                        <div class="mdui-collapse-item-body mdui-list">
+                            <div class="mdui-list-item mdui-ripple _list">Overview</div>
+                            <div class="mdui-list-item mdui-ripple _list">All Pages</div>
+                            <div class="mdui-list-item mdui-ripple _list">Landing Pages</div>
+                            <div class="mdui-list-item mdui-ripple _list">Exit Pages</div>
+                        </div>
+                    </li>
+                    <li class="mdui-list-item mdui-ripple _list">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">shopping_cart</i>
+                        <div class="mdui-list-item-content">Ecommerce</div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section class="mdui-container">
+            <div class="mdui-row"></div>
+
+
+        </section>
+    </div>
+
+</body>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    var inst = new mdui.Drawer('#drawer');
+
+
+    document.getElementById('taggle-icon').addEventListener('click', function () {
+        inst.toggle();
+    });
+    $('.top-tab .mdui-ripple').click(function (e) {
+        var _targeturl = e.target.dataset.id;
+        //console.log(e.target);
+        if (_targeturl != undefined) {
+            $('#container').load(_targeturl + '.html');
+
+        }
+    })
+</script>
+
+<script src="js/scroll.js"></script>
+
+</html>

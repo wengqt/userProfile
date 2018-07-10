@@ -1,0 +1,20 @@
+.mdui-theme-primary-teal .mdui-tab .mdui-tab-active {
+    color:white;
+}
+.mdui-tab a{
+    color: white;
+}
+.top-tab{
+    height: 100%;
+   
+}
+/* #container{
+    margin-top: 67px;
+} */
+
+.row{
+    margin-top: 10px;
+}
+.mdui-card-header-title,.mdui-card-header-subtitle{
+    margin-left: 0;
+}
