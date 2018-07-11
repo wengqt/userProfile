@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>医疗平台</title>
-    <link rel="stylesheet" href="/css/mdui.min.css">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/mdui.min.css" type="text/css">  
+    <link rel="stylesheet" href="/css/timeliner.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/css/responsive.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/css/app.css" type="text/css">
+    <!-- <link rel="stylesheet" href="/css/demo.css" media="screen"> -->
     <script src="js/mdui.min.js"></script>
 </head>
 
@@ -96,7 +99,9 @@
             </div>
         </section>
         <section class="mdui-container">
-            <div class="mdui-row"></div>
+            <div class="mdui-row row">
+
+            </div>
 
 
         </section>
@@ -106,6 +111,7 @@
 
 
 <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/timeliner.js"></script>
 <script>
     var inst = new mdui.Drawer('#drawer');
 
@@ -113,6 +119,7 @@
     document.getElementById('taggle-icon').addEventListener('click', function () {
         inst.toggle();
     });
+
     $('.top-tab .mdui-ripple').click(function (e) {
         var _targeturl = e.target.dataset.id;
         //console.log(e.target);

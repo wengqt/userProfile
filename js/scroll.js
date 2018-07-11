@@ -19,15 +19,17 @@ var offon = true; 
             $('._list').each(function (i) {    //获取当前下标
                    // console.log(i);
                 var _index = i;   
-                var _height = $('.mdui-container .mdui-row')[_index].offsetHeight; //获取上偏移值
-                full_length += _height;    //console.log(_index,full_length,_top)
-                if (full_length > _top) { //优先原则
-                        
-                    $('._list').eq(_index).addClass('mdui-list-item-active').siblings().removeClass(
-                        'mdui-list-item-active');    
-                    return false; //跳出遍历
-                       
-                };  
+                if( $('.mdui-container .mdui-row')[_index]!=undefined){
+                    var _height = $('.mdui-container .mdui-row')[_index].offsetHeight; //获取上偏移值
+                    full_length += _height;    //console.log(_index,full_length,_top)
+                    if (full_length > _top) { //优先原则
+                            $('._list').removeClass('mdui-list-item-active');
+                        $('._list').eq(_index).addClass('mdui-list-item-active');
+                        return false; //跳出遍历
+                           
+                    }; 
+                }
+                 
             });  
         }; 
     }
@@ -49,3 +51,4 @@ var offon = true; 
         }
 
     });
+     //$('.mdui-card').css('height',window.innerHeight-62+'px')

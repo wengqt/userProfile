@@ -1,63 +1,50 @@
-<script src="js/scroll.js"></script>
 <script src="js/echarts.min-2.js"></script>
 <script src="js/echarts-wordcloud.min.js"></script>
+<script src="js/personal-charts.js"></script>
+<script src="js/mdui.min.js"></script>
+<script src="js/timeliner.min.js"></script>
+<script src="js/scroll.js"></script>
+<script>
+    var inst = new mdui.Drawer('#drawer');
+    $.timeliner({
+        timelineContainer: '#timeline',
+        //timelineSectionMarker: '.milestone',
+        //oneOpen: false,
+        fontOpen: '25px',
+        fontClosed: '20px',
+        // startState: 'flat',
+        // expandAllText: '+ Show All',
+        // collapseAllText: '- Hide All'
+    });
+</script>
 <section>
     <div class="mdui-drawer" id="drawer">
         <ul class="mdui-list" mdui-collapse="{accordion: true}">
 
             <li class="mdui-list-item mdui-ripple _list" href="#home">
                 <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
-                <div class="mdui-list-item-content">Home</div>
+                <div class="mdui-list-item-content">人体结构图</div>
             </li>
 
             <li class="mdui-list-item mdui-ripple _list">
                 <i class="mdui-list-item-icon mdui-icon material-icons">dashboard</i>
-                <div class="mdui-list-item-content">Dashboard</div>
+                <div class="mdui-list-item-content">用户词云</div>
             </li>
 
             <li class="mdui-collapse-item mdui-collapse-item-open">
                 <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
                     <i class="mdui-list-item-icon mdui-icon material-icons">people</i>
-                    <div class="mdui-list-item-content">Audience</div>
+                    <div class="mdui-list-item-content">个人图表</div>
                     <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
                 </div>
-                <div class="mdui-collapse-item-body mdui-list ">
-                    <a href="#home" class="mdui-list-item mdui-ripple _list">Overview</a>
-                    <a class="mdui-list-item mdui-ripple _list">Language</a>
-                    <a class="mdui-list-item mdui-ripple _list">Location</a>
-                    <a class="mdui-list-item mdui-ripple _list">New vs Returning</a>
+                <div class="mdui-collapse-item-body mdui-list _list">
+                    <a  class="mdui-list-item mdui-ripple ">个人就医情况</a>
+                    <a class="mdui-list-item mdui-ripple ">身体系统状况</a>
                 </div>
-            </li>
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <i class="mdui-list-item-icon mdui-icon material-icons">device_hub</i>
-                    <div class="mdui-list-item-content">Acquisition</div>
-                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                </div>
-                <div class="mdui-collapse-item-body mdui-list">
-                    <div class="mdui-list-item mdui-ripple _list">Overview</div>
-                    <div class="mdui-list-item mdui-ripple _list">All Traffic</div>
-                    <div class="mdui-list-item mdui-ripple _list">Direct Traffic</div>
-                    <div class="mdui-list-item mdui-ripple _list">Search Overview</div>
-                </div>
-            </li>
-
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <i class="mdui-list-item-icon mdui-icon material-icons">touch_app</i>
-                    <div class="mdui-list-item-content">Behavior</div>
-                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                </div>
-                <div class="mdui-collapse-item-body mdui-list">
-                    <div class="mdui-list-item mdui-ripple _list">Overview</div>
-                    <div class="mdui-list-item mdui-ripple _list">All Pages</div>
-                    <div class="mdui-list-item mdui-ripple _list">Landing Pages</div>
-                    <div class="mdui-list-item mdui-ripple _list">Exit Pages</div>
-                </div>
-            </li>
+            </li>                
             <li class="mdui-list-item mdui-ripple _list">
-                <i class="mdui-list-item-icon mdui-icon material-icons">shopping_cart</i>
-                <div class="mdui-list-item-content">Ecommerce</div>
+                    <i class="mdui-list-item-icon mdui-icon material-icons">device_hub</i>
+                <div class="mdui-list-item-content">就医时间轴</div>
             </li>
 
         </ul>
@@ -65,7 +52,7 @@
 </section>
 <section class="mdui-container">
     <div class="mdui-row row">
-        <div class="mdui-col-md-6 mdui-col-sm-12">
+        <div class="mdui-col-md-12 mdui-col-sm-12">
             <div class="mdui-card ">
 
                 <!-- 卡片头部，包含头像、标题、副标题 -->
@@ -75,7 +62,7 @@
         </div> -->
 
                 <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
-                <div class="mdui-card-media " style="position: relative;height: 400px;width: 150px;left: 50%;margin-left: -75px;">
+                <div class="mdui-card-media " style="position: relative;height: 400px;width: 150px;margin: 0 auto">
 
                     <img src="./img/guge1.png" style="position: absolute;height: 400px;width: auto;">
                     <img src="./img/guge_1_1.png" style="position: absolute;height: 400px;width: auto;">
@@ -114,9 +101,12 @@
 
             </div>
         </div>
-        <div class="mdui-col-md-6 mdui-col-sm-12">
+    </div>
+    <div class="mdui-row row">
+        <div class="mdui-col-md-12 mdui-col-sm-12">
             <div class="mdui-card ">
-                <div class="mdui-card-media" id="word-chart" style="position: relative;height: 400px;width: 150px;left: 50%;margin-left: -75px;">
+                <div class="mdui-card-media" style="height: 400px;overflow-x: auto">
+                    <div id="word-chart" style="height: 100%;width: 600px;margin: 0 auto;"></div>
                 </div>
                 <div class="mdui-card-primary">
                     <div class="mdui-card-primary-title">用户词云</div>
@@ -139,7 +129,83 @@
         </div>
     </div>
     <div class="mdui-row row">
-        <div class="mdui-card mdui-col-md-6 mdui-col-sm-12">
+        <div class="mdui-col-md-6 mdui-col-sm-12">
+            <div class="mdui-card">
+                <div class="mdui-card-media" style="height: 400px;">
+                    <div id="tir-chart" style="height: 100%;"></div>
+                </div>
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">个人就医情况</div>
+                    <div class="mdui-card-primary-subtitle">Subtitle</div>
+                </div>
+                <div class="mdui-card-content">描述：「描述描述描述描述描述描述」</div>
+            </div>
+        </div>
+        <div class="mdui-col-md-6 mdui-col-sm-12">
+            <div class="mdui-card">
+                <div class="mdui-card-media" style="height: 400px;">
+                    <div id="radar-chart" style="height: 100%;"></div>
+                </div>
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">身体系统状况</div>
+                    <div class="mdui-card-primary-subtitle">Subtitle</div>
+                </div>
+                <div class="mdui-card-content">描述：「描述描述描述描述描述描述」</div>
+            </div>
         </div>
     </div>
+    <div class="mdui-row row">
+        <div class="mdui-col-md-12 mdui-col-sm-12">
+            <div class="mdui-card ">
+                <div class="mdui-card-header">
+                    <div class="mdui-card-header-title">就医/体检记录</div>
+                    <div class="mdui-card-header-subtitle">Subtitle</div>
+                </div>
+                <div class="mdui-card-media" style="padding: 16px">
+                    <div id="timeline" class="timeline-container">
+                        <div class="timeline-wrapper">
+                            <h2 class="timeline-time">
+                                <span>1976</span>
+                            </h2>
+                            <dl class="timeline-series">
+                                <dt class="timeline-event start-open" id="event01">
+                                    <a>Event</a>
+                                </dt>
+                                <dd class="timeline-event-content" id="event01EX">
+                                    <h3>1999.9.9-2008.12.25</h3>
+                                    <p>Content about the event goes here.</p>
+                                </dd>
+
+                                <dt class="timeline-event" id="event02">
+                                    <a>Another Event</a>
+                                </dt>
+                                <dd class="timeline-event-content" id="event02EX">
+                                    <p>Content about the other event.</p>
+                                </dd>
+
+                            </dl>
+                        </div>
+                        <div class="timeline-wrapper">
+                            <h2 class="timeline-time"><span>1984</span></h2>
+                            <dl class="timeline-series">
+                                <dt class="timeline-event" id="event03">
+                                    <a>Yet Another Event</a>
+                                </dt>
+                                <dd class="timeline-event-content" id="event03EX">
+                                    <p>Content about the event goes here.</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <br class="clear">
+                    </div>
+                </div>
+                <div class="mdui-card-content">描述：「描述描述描述描述描述描述」</div>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-row row">
+        <!-- <div class="mdui-card mdui-col-md-6 mdui-col-sm-12">
+        </div> -->
+    </div>
+   
 </section>

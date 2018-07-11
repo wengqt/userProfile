@@ -18,3 +18,19 @@
 .mdui-card-header-title,.mdui-card-header-subtitle{
     margin-left: 0;
 }
+
+.mdui-card-media{
+    padding-top: 10px;
+}
+
+.timeline-event a{
+    font-size: 20px;
+}
+
+.timeline-series dd h3{
+    color: black;
+    font-size: 18px;
+} 
+.timeline-wrapper h2{
+    font-size: 30px;
+}
